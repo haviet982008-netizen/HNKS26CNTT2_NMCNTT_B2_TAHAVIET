@@ -1,0 +1,18 @@
+﻿PHẦN 1: PHÂN TÍCH CÁC LỖI SAI TRONG LẬP LUẬN CỦA NAM
+1. Lưu file vào ổ C:\ (Phân vùng Hệ điều hành):
+
+   * Lỗi sai: Ổ C:\ là nơi chứa Windows và phần mềm hệ thống. Khi máy bị lỗi cần cài lại Win hoặc Format ổ C:, toàn bộ bài tập sẽ bị xóa sạch vĩnh viễn. Ngoài ra, lưu dữ liệu cá nhân tràn lan ở ổ C:\ gây đầy bộ nhớ tạm và làm chậm máy.
+   2. Lưu vào thư mục hệ thống Windows\System32:
+
+      * Lỗi sai: System32 là thư mục chứa file nhân của Windows, không có chức năng "bảo vệ" file code như Nam nghĩ. Ngược lại, lưu file vào đây dễ bị Win đòi quyền Administrator khi truy cập, bị phần mềm diệt virus quét nhầm là mã độc, hoặc gây nguy cơ lỗi hệ thống.
+      3. Đặt tên thư mục có khoảng trắng (nhap mon CNTT):
+
+         * Lỗi sai: Vi phạm quy tắc đặt tên Developer. Khi thao tác trong Terminal (dòng lệnh), khoảng trắng sẽ làm cho trình thông dịch hiểu nhầm nhap, mon, CNTT là các tham số/đối số riêng biệt, dẫn đến lỗi không tìm thấy đường dẫn (FileNotFoundError / No such file or directory).
+PHẦN 2: SỬA LỖI & TẠO CÂY THƯ MỤC (FILE TREE) CHUẨN
+Toàn bộ dữ liệu dự án/code phải được lưu ở ổ đĩa dữ liệu (ví dụ D:) và áp dụng chuẩn đặt tên không khoảng trắng (kebab-case hoặc snake_case).
+Sơ đồ Cây thư mục chuẩn:
+D:\
+└── workspace/
+    └── nhap-mon-cntt/
+        └── session-02/
+            └── bai1.py
